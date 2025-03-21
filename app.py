@@ -103,7 +103,6 @@ def recommend():
     
     # Store the search query in session
     session['last_search'] = movie_title
-    
     if movie_title not in df['title'].values:
         return render_template('recommendations.html', movie_title=movie_title, recommendations=[], error=True)
     
