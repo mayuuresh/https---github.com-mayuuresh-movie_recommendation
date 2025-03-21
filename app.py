@@ -90,7 +90,7 @@ def get_movie_details(movie_id):
 # Routes
 @app.route('/')
 def home():
-    # Get 10 popular movies for suggestions
+    # Get 10 popular movies for suggestionse
     popular_movies = df.sort_values('popularity', ascending=False).head(10)['title'].tolist()
     return render_template('index.html', popular_movies=popular_movies)
 
